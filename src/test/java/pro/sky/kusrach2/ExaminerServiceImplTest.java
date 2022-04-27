@@ -53,7 +53,7 @@ public class ExaminerServiceImplTest {
 
     @Test
     public void shouldReturnTheEntireCollectionIfTheNumberOfQuestionsMatchesTheQuery() {
-        when(javaQuestionServiceMock.getAll()).thenReturn(questionsMock);
+            when(javaQuestionServiceMock.getAll()).thenReturn(questionsMock);
 
         assertEquals(questionsMock, out.getQuestions(6));
     }

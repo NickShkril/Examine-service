@@ -10,8 +10,10 @@ import java.util.HashSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+
 public class JavaQuestionServiceImplTest {
     JavaQuestionService javaQuestionService = new JavaQuestionService();
+
 
     @Test
     public void shouldReturnQuestionOnSuccessfulAddByQuestionObject() {
@@ -29,13 +31,13 @@ public class JavaQuestionServiceImplTest {
 
     @Test
     public void shouldThrowAnErrorIfOneOfTheParametersIsEmpty() {
-        assertThrows(RuntimeException.class, () -> javaQuestionService.add("", "Это язык програмирования!"));
+        assertThrows(RuntimeException.class, () -> javaQuestionService.add(null));
 
     }
 
     @Test
     public void mustThrowAnExceptionIfNullIsPassedInTheParameter() {
-        assertThrows(RuntimeException.class, () -> javaQuestionService.add(null));
+        assertThrows(RuntimeException.class, () -> javaQuestionService.remove(null));
     }
 
     @Test
